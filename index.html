@@ -29,38 +29,47 @@ name padeda nunesti duomenis submit mygtukui į naują puslapį-->
 
 <form id="testForm">
 <div class="form-control">  
-  <label for="person-name">Name</label>
-  <input type="text" name="name" id="person-name" placeholder="Enter your name..." required>
+  <label for="person-name">Name: </label>
+  <input type="text" name="name" id="person-name" placeholder="Enter your name..." value="asdasd" required>
   <span><span style="color: red">*</span> (privalomas)</span>
 </div>
 
 <div class="form-control">
-<label for="person-last-name">Last-name</label>
-<input type="text" name="lastName" id="person-last-name" placeholder="Enter your last name..." required>
+<label for="person-last-name">Last-name: </label>
+<input type="text" name="lastName" id="person-last-name" placeholder="Enter your last name..." value="asdasssssd"required>
 <span><span style="color: red">*</span> (privalomas)</span>
 </div>
 
 <div class="form-control">  
-  <label for="person-age">Age</label>
-  <input type="number-" name="personAge" id="person-age" placeholder="Enter your age..." required>
+  <label for="person-age">Age: </label>
+  <input type="number-" name="personAge" id="person-age" placeholder="Enter your age..." value="asasdasddasd" required>
   <span><span style="color: red">*</span> (privalomas)</span>
 </div>
+<!-- 
+<div class="form-control">
+Password: <input type="password" value="FakePSW" id="myInput">
+<input type="checkbox" onclick="myFunction()">Show Password
+</div> -->
 
 <div class="form-control">
-  <label for="person-phone">Phone number-</label>
-  <input type="tel" name="personPhone" id="person-phone" placeholder="Enter your phone...">
+  <label for="person-phone">Phone number: </label>
+  <input type="password" name="personPhone" id="personPhone" value="asdaaaaaaaaasd"placeholder="Enter your phone...">
+  <input type="checkbox" id="show-number" onclick="hiddenData('personPhone')">
+  <label for="show-number">Show number</label>
   <span>(neprivalomas)</span>
 </div>
 
 <div class="form-control">
-  <label for="person-email">Email adress</label>
-  <input type="email" name="personEmail" id="person-email" placeholder="Enter your email...">
+  <label for="person-email">Email adress: </label>
+  <input type="password" name="personEmail" id="personEmail" value="asdaassssasd" placeholder="Enter your email...">
+  <input type="checkbox" id="show-email" onclick="hiddenData('personEmail')">
+  <label for="show-email">Show email</label>
   <span>(neprivalomas)</span>
 </div>
 
 <!-- 6. Range tipo laukelis, kuris skirtas įvertinti savo IT žinias nuo 1 iki 10. Galimas vertinimas tik sveikiems skaičiams. -->
 <div class="form-control">
-  <label for="it_knowledge">Rate your IT knowledge</label>
+  <label for="it_knowledge">Rate your IT knowledge: </label>
   <input id="it_knowledge" name="knowledge" type="range" min="1" max="10"/>
   <p>Balas: <output id="value"></output></p>
 </div>
@@ -71,7 +80,7 @@ name padeda nunesti duomenis submit mygtukui į naują puslapį-->
 
 <!-- 7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti grupes nuo FEU 1gr. iki FEU 10gr. -->
 <fieldset>
-<legend>Select Group</legend>
+<legend>Select Group: </legend>
 <div class="form-control">
   <label for="group-number-1">FEU 1gr</label>
   <input type="radio" name="groupNumber" id="group-number-1" value="FEU 1gr">
@@ -117,7 +126,7 @@ name padeda nunesti duomenis submit mygtukui į naują puslapį-->
 <!-- 8. Checkbox tipo laukeliai, kuriuose galima pasirinkti dominančias programavimo kalbas (bent 4 skirtingi checkbox elementai). -->
 
 <fieldset>
-  <legend>Programavimo kalbos</legend>
+  <legend>Programavimo kalbos: </legend>
     <label for="interest-python">Python</label>
     <input type="checkbox" name="interestFor" id="interest-python" value="Python">
   </div>
