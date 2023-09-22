@@ -9,14 +9,14 @@ event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
       let studentList = document.querySelector('#student-list')
       let divItem = document.createElement('div')
       divItem.classList = ('div-item')
-      studentList.prepend(divItem)
+      studentList.prependChild(divItem)
       studentList.style.backgroundColor = 'lightBlue'
       studentList.style.border = 'solid 2px'
 
       let deleteStudent = document.createElement('button')
       deleteStudent.id = 'delete-student-id'
       deleteStudent.textContent = `Delete student`
-      divItem.prepend(deleteStudent)
+      divItem.prependChild(deleteStudent)
 
       deleteStudent.addEventListener('click', function(){
         studentList.removeChild(divItem)
@@ -24,13 +24,14 @@ event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
         deleteMessage.textContent = 'Student successfully deleted'
         deleteMessage.style.color = 'green'
         let deleteMessageWrapper = document.createElement('div')
-        deleteMessageWrapper.append(deleteMessage)
+        deleteMessageWrapper.appendChild(deleteMessage)
         studentList.after(deleteMessageWrapper)
         //Ištrynimo funkcija.
         setTimeout(function() {
           deleteMessageWrapper.remove()
         }, 5000);
       })
+
 
       // Mygtukas rodyti duomenis
       function dataShower(email, phone){
