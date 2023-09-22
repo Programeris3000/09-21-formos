@@ -9,14 +9,14 @@ event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
       let studentList = document.querySelector('#student-list')
       let divItem = document.createElement('div')
       divItem.classList = ('div-item')
-      studentList.prependChild(divItem)
+      studentList.prepend(divItem)
       studentList.style.backgroundColor = 'lightBlue'
       studentList.style.border = 'solid 2px'
 
       let deleteStudent = document.createElement('button')
       deleteStudent.id = 'delete-student-id'
       deleteStudent.textContent = `Delete student`
-      divItem.prependChild(deleteStudent)
+      divItem.prepend(deleteStudent)
 
       deleteStudent.addEventListener('click', function(){
         studentList.removeChild(divItem)
@@ -24,7 +24,7 @@ event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
         deleteMessage.textContent = 'Student successfully deleted'
         deleteMessage.style.color = 'green'
         let deleteMessageWrapper = document.createElement('div')
-        deleteMessageWrapper.appendChild(deleteMessage)
+        deleteMessageWrapper.append(deleteMessage)
         studentList.after(deleteMessageWrapper)
         //Ištrynimo funkcija.
         setTimeout(function() {
