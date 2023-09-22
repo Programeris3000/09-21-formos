@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- Formoje galime kurti input elementus. input elementas yra save uzdarantis.
+
+Save uzdarantys elementai kartais turi <input />  BackSlasha pabaigoje. Itakos neturi 
+
+input type by default yra <input type ='text'>
+
+Atributai
+
+value="John" I text laukelį jau iškart bus įrašytas tekstas(BET NE KAIP PlaceHolder)
+
+placeholder="Enter your name..."
+maxlength="15" Daugiau nei 15 simboliu negalesi ivest.
+-->
+
+<!-- <form action="/form-submit.html"> Reikia nurodyti puslapį į kurį forma nusiūs duomenis. 
+
+
+Id leidzia prie input prideti label elementus
+name padeda nunesti duomenis submit mygtukui į naują puslapį-->
+
+
+<form id="testForm">
+<div class="form-control">  
+  <label for="person-name">Name</label>
+  <input type="text" name="name" id="person-name" placeholder="Enter your name..." required>
+  <span><span style="color: red">*</span> (privalomas)</span>
+</div>
+
+<div class="form-control">
+<label for="person-last-name">Last-name</label>
+<input type="text" name="lastName" id="person-last-name" placeholder="Enter your last name..." required>
+<span><span style="color: red">*</span> (privalomas)</span>
+</div>
+
+<div class="form-control">  
+  <label for="person-age">Age</label>
+  <input type="number-" name="personAge" id="person-age" placeholder="Enter your age..." required>
+  <span><span style="color: red">*</span> (privalomas)</span>
+</div>
+
+<div class="form-control">
+  <label for="person-phone">Phone number-</label>
+  <input type="tel" name="personPhone" id="person-phone" placeholder="Enter your phone...">
+  <span>(neprivalomas)</span>
+</div>
+
+<div class="form-control">
+  <label for="person-email">Email adress</label>
+  <input type="email" name="personEmail" id="person-email" placeholder="Enter your email...">
+  <span>(neprivalomas)</span>
+</div>
+
+<!-- 6. Range tipo laukelis, kuris skirtas įvertinti savo IT žinias nuo 1 iki 10. Galimas vertinimas tik sveikiems skaičiams. -->
+<div class="form-control">
+  <label for="it_knowledge">Rate your IT knowledge</label>
+  <input id="it_knowledge" name="knowledge" type="range" min="1" max="10"/>
+  <p>Balas: <output id="value"></output></p>
+</div>
+
+
+  
+
+
+<!-- 7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti grupes nuo FEU 1gr. iki FEU 10gr. -->
+<fieldset>
+<legend>Select Group</legend>
+<div class="form-control">
+  <label for="group-number-1">FEU 1gr</label>
+  <input type="radio" name="groupNumber" id="group-number-1" value="FEU 1gr">
+</div>
+<div class="form-control">
+  <label for="group-number-2">FEU 2gr</label>
+  <input type="radio" name="groupNumber" id="group-number-2" value="FEU 2gr">
+</div>
+<div class="form-control">
+  <label for="group-number-3">FEU 3gr</label>
+  <input type="radio" name="groupNumber" id="group-number-3" value="FEU 3gr">
+</div>
+<div class="form-control">
+  <label for="group-number-4">FEU 4gr</label>
+  <input type="radio" name="groupNumber" id="group-number-4" value="FEU 4gr">
+</div>
+<div class="form-control">
+  <label for="group-number-5">FEU 5gr</label>
+  <input type="radio" name="groupNumber" id="group-number-5" value="FEU 5gr">
+</div>
+<div class="form-control">
+  <label for="group-number-6">FEU 6gr</label>
+  <input type="radio" name="groupNumber" id="group-number-6" value="FEU 6gr">
+</div>
+<div class="form-control">
+  <label for="group-number-7">FEU 7gr</label>
+  <input type="radio" name="groupNumber" id="group-number-7" value="FEU 7gr">
+</div>
+<div class="form-control">
+  <label for="group-number-8">FEU 8gr</label>
+  <input type="radio" name="groupNumber" id="group-number-8" value="FEU 8gr">
+</div>
+<div class="form-control">
+  <label for="group-number-9">FEU 9gr</label>
+  <input type="radio" name="groupNumber" id="group-number-9" value="FEU 9gr">
+</div>
+<div class="form-control">
+  <label for="group-number-10">FEU 10gr</label>
+  <input type="radio" name="groupNumber" id="group-number-10" value="FEU 10gr">
+</div>
+</fieldset>
+
+<!-- 8. Checkbox tipo laukeliai, kuriuose galima pasirinkti dominančias programavimo kalbas (bent 4 skirtingi checkbox elementai). -->
+
+<fieldset>
+  <legend>Programavimo kalbos</legend>
+    <label for="interest-python">Python</label>
+    <input type="checkbox" name="interestFor" id="interest-python" value="Python">
+  </div>
+  <div class="form-control">
+    <label for="interest-javascript">Javascript</label>
+    <input type="checkbox" name="interestFor" id="interest-javascript" value="Javascript">
+  </div>
+  <div class="form-control">
+    <label for="interest-java">Java</label>
+    <input type="checkbox" name="interestFor" id="interest-java" value="Java">
+  </div>
+  <div class="form-control">
+    <label for="interest-cpp">C++</label>
+    <input type="checkbox" name="interestFor" id="interest-cpp" value="C++">
+  </div>
+</fieldset>
+
+
+<!-- <button type="submit">Submit</button>  -->
+<input type="submit" value="Submit">
+</form>
+
+<div id="student-list"></div>
+
+
+<!-- Sukurti kontaktų formą.
+1. Kontaktų formoje turi būti šie laukeliai:
+    1. Tekstinis laukelis vardui (privalomas).
+    2. Tekstinis laukelis pavardei (privalomas).
+    3. Skaičiaus laukelis amžiui (privalomas).
+    4. Laukelis įvesti telefono numerį (neprivalomas).
+    5. Laukelis įvesti el. paštą (privalomas).
+    6. Range tipo laukelis, kuris skirtas įvertinti savo IT žinias nuo 1 iki 10. Galimas vertinimas tik sveikiems skaičiams.
+    7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti grupes nuo FEU 1gr. iki FEU 10gr.
+    8. Checkbox tipo laukeliai, kuriuose galima pasirinkti dominančias programavimo kalbas (bent 4 skirtingi checkbox elementai).
+    9. Šalia kiekvieno įvesties (input) elemento, pridėti label elementą, kuris žymi laukelio pavadinimą.
+  
+  -->
+  <script src="/script.js"></script>
+</body>
+</html>
