@@ -31,7 +31,6 @@ event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
           deleteMessageWrapper.remove()
         }, 5000);
       })
-      
 
       // Mygtukas rodyti duomenis
       function dataShower(email, phone){
@@ -58,9 +57,6 @@ event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
       })
       }
       dataShower('personEmail', 'personPhone')
-
-        
-  
 
       //Vardas
       const personNameValue = testForm.name.value
@@ -102,8 +98,6 @@ event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
       personPhone.textContent = `Phone number: ${maskedText}`
       divItem.append(personPhone)
 
-
-
       //Elektroninis pastas
       let personEmailValue = testForm.personEmail.value
       let personEmail = document.createElement('h2')
@@ -111,8 +105,6 @@ event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
       personEmail.textContent = `Email address: ${maskedText1}`
       divItem.append(personEmail)
 
-
-      
       //It zinios
       const personKnowledgeValue = testForm.knowledge.value
       const personKnowledge = document.createElement('h2')
@@ -145,7 +137,7 @@ value.textContent = input.value;
 input.addEventListener("input", (event) => {
   value.textContent = event.target.value;
 });
-
+//Įvesčių slėpimas
 function hiddenData(data) {
   var x = document.getElementById(data);
   if (x.type === "password") {
