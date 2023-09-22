@@ -14,6 +14,7 @@ studentList.style.backgroundColor = 'lightBlue'
 studentList.style.border = 'solid 2px'
 
 
+
 //Vardas
 const personNameValue = testForm.name.value
 let personName = document.createElement('h2')
@@ -86,54 +87,54 @@ if(checkbox.checked){
 
 }
 init()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Output elementas
 const value = document.querySelector("#value");
 const input = document.querySelector("#it_knowledge");
 value.textContent = input.value;
 input.addEventListener("input", (event) => {
   value.textContent = event.target.value;
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
