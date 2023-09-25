@@ -6,26 +6,6 @@
   <title>Document</title>
 </head>
 <body>
-<!-- Formoje galime kurti input elementus. input elementas yra save uzdarantis.
-
-Save uzdarantys elementai kartais turi <input />  BackSlasha pabaigoje. Itakos neturi 
-
-input type by default yra <input type ='text'>
-
-Atributai
-
-value="John" I text laukelį jau iškart bus įrašytas tekstas(BET NE KAIP PlaceHolder)
-
-placeholder="Enter your name..."
-maxlength="15" Daugiau nei 15 simboliu negalesi ivest.
--->
-
-<!-- <form action="/form-submit.html"> Reikia nurodyti puslapį į kurį forma nusiūs duomenis. 
-
-
-Id leidzia prie input prideti label elementus
-name padeda nunesti duomenis submit mygtukui į naują puslapį-->
-
 
 <form id="testForm">
 <div class="form-control">  
@@ -45,25 +25,17 @@ name padeda nunesti duomenis submit mygtukui į naują puslapį-->
   <input type="number-" name="personAge" id="person-age" placeholder="Enter your age..." value="asasdasddasd" required>
   <span><span style="color: red">*</span> (privalomas)</span>
 </div>
-<!-- 
-<div class="form-control">
-Password: <input type="password" value="FakePSW" id="myInput">
-<input type="checkbox" onclick="myFunction()">Show Password
-</div> -->
+
 
 <div class="form-control">
   <label for="personPhone">Phone number: </label>
-  <input type="password" name="personPhone" id="personPhone" value="asdaaaaaaaaasd"placeholder="Enter your phone...">
-  <input type="checkbox" id="show-number" onclick="hiddenData('personPhone')">
-  <label for="show-number">Show number</label>
+  <input type="phone" name="personPhone" id="personPhone" value="asdaaaaaaaaasd"placeholder="Enter your phone...">
   <span>(neprivalomas)</span>
 </div>
 
 <div class="form-control">
   <label for="personEmail">Email adress: </label>
-  <input type="password" name="personEmail" id="personEmail" value="asdaassssasd" placeholder="Enter your email...">
-  <input type="checkbox" id="show-email" onclick="hiddenData('personEmail')">
-  <label for="show-email">Show email</label>
+  <input type="email" name="personEmail" id="personEmail" value="asdaassssasd@emial.com" placeholder="Enter your email...">
   <span>(neprivalomas)</span>
 </div>
 
@@ -74,16 +46,12 @@ Password: <input type="password" value="FakePSW" id="myInput">
   <p>Balas: <output id="value"></output></p>
 </div>
 
-
-  
-
-
 <!-- 7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti grupes nuo FEU 1gr. iki FEU 10gr. -->
 <fieldset>
 <legend>Select Group: </legend>
 <div class="form-control">
   <label for="group-number-1">FEU 1gr</label>
-  <input type="radio" name="groupNumber" id="group-number-1" value="FEU 1gr">
+  <input type="radio" name="groupNumber" id="group-number-1" value="FEU 1gr" checked>
 </div>
 <div class="form-control">
   <label for="group-number-2">FEU 2gr</label>
@@ -127,20 +95,20 @@ Password: <input type="password" value="FakePSW" id="myInput">
 
 <fieldset>
   <legend>Programavimo kalbos: </legend>
-    <label for="interest-python">Python</label>
-    <input type="checkbox" name="interestFor" id="interest-python" value="Python">
+    <label for="interestPython">Python</label>
+    <input type="checkbox" name="interestFor" id="interestPython" value="Python">
   </div>
   <div class="form-control">
-    <label for="interest-javascript">Javascript</label>
-    <input type="checkbox" name="interestFor" id="interest-javascript" value="Javascript">
+    <label for="interestJavascript">Javascript</label>
+    <input type="checkbox" name="interestFor" id="interestJavascript" value="Javascript">
   </div>
   <div class="form-control">
-    <label for="interest-java">Java</label>
-    <input type="checkbox" name="interestFor" id="interest-java" value="Java">
+    <label for="interestJava">Java</label>
+    <input type="checkbox" name="interestFor" id="interestJava" value="Java">
   </div>
   <div class="form-control">
-    <label for="interest-cpp">C++</label>
-    <input type="checkbox" name="interestFor" id="interest-cpp" value="C++">
+    <label for="interestCpp">C++</label>
+    <input type="checkbox" name="interestFor" id="interestCpp" value="C++">
   </div>
 </fieldset>
 
