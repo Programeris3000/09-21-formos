@@ -1,7 +1,4 @@
 const preAddedStudents = [
-  {
-
-  },
   // {
   //   name: 'Steeve',
   //   surname: 'Travolta',
@@ -49,7 +46,10 @@ const preAddedStudents = [
   //   interest: ['Javascript'],
   // },  
 ]
-console.log(preAddedStudents)
+const studentsObj = {
+
+}
+
 
 // testForm.addEventListener('input',(event)=>{
 //   let key = event.target.name
@@ -141,18 +141,26 @@ const checkedInterestsValue = [...checkedInterests].map(oneInterest =>{
 function init() {
 const testForm = document.querySelector(`#testForm`) //paselektinu forma
 
+
+masyvas = localStorage.getItem('masyvas')
+JSON.parse(masyvas)
+console.log(masyvas)
+
+
 testForm.addEventListener('submit', (event)=>{
 event.preventDefault() //Anuliuoju defaultini narsykles perkrovima
 
-      // preAddedStudents.push('name-input', nameInput.value)
-      // preAddedStudents.push('lastName-input', lastNameInput.value)
-      // preAddedStudents.push('age-input', ageInput.value)
-      // preAddedStudents.push('number-input', phoneInput.value)
-      // preAddedStudents.push('email-input', emailInput.value)
-      // preAddedStudents.push('knowledge-input', knowledgeInput.value)
-      // preAddedStudents.push('name-input', nameInput.value) 
-      // preAddedStudents.push('groupName')
-      console.log(preAddedStudents)
+studentsObj['name-input'] = nameInput.value
+studentsObj['age-input'] = ageInput.value
+studentsObj['lastName-input'] = lastNameInput.value
+studentsObj['number-input'] = phoneInput.value
+studentsObj['email-input'] = emailInput.value
+studentsObj['knowledge-input'] = knowledgeInput.value
+preAddedStudents.push(studentsObj)
+let preAddedStudentsStringified = JSON.stringify(preAddedStudents)
+localStorage.setItem('masyvas', preAddedStudentsStringified)
+
+
 
 
 
